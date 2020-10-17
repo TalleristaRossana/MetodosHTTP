@@ -1,0 +1,36 @@
+extends  base.pug
+
+block content
+  script
+      include script.js
+  h2 Labores del hogar por genero
+  p Selecciona segun conideres, se honesto con tus respuestas
+  form(action="/form-with-get")
+    p Lavar los trastes
+    input(type="radio" id="mujer1" name="labor1" value="1" onclick="calculate()")
+    label( for="mujer1") Mujer
+    input(type="radio" id="hombre1" name="labor1" value="1" onclick="calculate()")
+    label( for="hombre1") Hombre
+    p Limpieza la casa
+    input(type="radio" id="mujer2" name="labor2" value="1" onclick="calculate()")
+    label( for="mujer2") Mujer
+    input(type="radio" id="hombre2" name="labor2" value="1" onclick="calculate()")
+    label( for="hombre2") Hombre
+    p Cocinar
+    input(type="radio" id="mujer3" name="labor3" value="1" onclick="calculate()")
+    label( for="mujer3") Mujer
+    input(type="radio" id="hombre3" name="labor3" value="1" onclick="calculate()")
+    label( for="hombre3") Hombre
+    p Planchar
+    input(type="radio" id="mujer4" name="labor4" value="1" onclick="calculate()")
+    label( for="mujer4") Mujer
+    input(type="radio" id="hombre4" name="labor4" value="1" onclick="calculate()")
+    label( for="hombre4") Hombre
+    p Ir al super
+    input(type="radio" id="mujer5" name="labor5" value="1" onclick="calculate()")
+    label( for="mujer5") Mujer
+    input(type="radio" id="hombre5" name="labor5" value="1" onclick="calculate()")
+    label( for="hombre5") Hombre
+    br
+    input(type="submit", name="enviar")
+  input(type="button", name="result", onclick="result()")
